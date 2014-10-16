@@ -19,6 +19,13 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
+
+  <ul>
+    <% @categories.each do |category| %>
+    <li><%= check_box_tag "post[category_ids][]", category.id%> <%= label_tag category.id, category.name %> </li>
+    <% end %>
+  </ul>
+
   <div class="actions">
     <%= f.submit %>
   </div>

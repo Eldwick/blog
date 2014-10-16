@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JamesBlog</title>
+  <title>Resolving my Deltas</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'james_icon.png' %>
 </head>
 <body>
+  <div id="wrapper">
+<!--     <header>
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand"><h1>Delta James</h1></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </div>
+      </nav>
+    </header> -->
+    <%= yield %>
+  </div>
 
-<%= yield %>
-
+  <footer>
+    <a href="/"><%= image_tag "james_icon.png", id: "footer_icon" %></a>
+    <span class="footer_text">
+      <a href='/'>James Jalandoni</a><br>
+      <a href='https://twitter.com/jamesjalandoni'>twitter</a><br>
+      <a href='https://github.com/Eldwick'>github</a>
+    </span>
+  </footer>
 </body>
 </html>

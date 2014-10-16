@@ -10,11 +10,15 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = Comment.new
+    @postForm = Post.find(params[:id])
+    session[:post_id] = @post.id
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    @categories = Category.all 
   end
 
   # GET /posts/1/edit

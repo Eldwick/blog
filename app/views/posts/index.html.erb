@@ -1,27 +1,44 @@
-<h1>Listing posts</h1>
+<div id="banner">
+<h1>Resolving my Deltas</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <div class="welcome">
+    <%= image_tag "james_hi.png", size:"200x205", id: "james_hi", alt: "Edit Entry" %>
+    <h2>Hi! Welcome to a collection of my ideas, blabberings, and shower thoughts. </h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis varius dui, a molestie turpis fermentum et. Duis id tristique sem, sed elementum felis. In at turpis tempor, eleifend felis non, venenatis tortor. Nam vel eleifend ligula. </p>
+    <p>Nunc felis orci, pulvinar et nulla et, pharetra finibus lectus. Mauris a massa mattis, tristique neque non, pretium diam. Nullam felis felis, venenatis vel augue vitae, elementum bibendum lorem.</p>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  </div>
+  <hr>
 
-<br>
+  <div class="row landing_bottom">
+    <div class="col-md-9 landing_posts">
+      <% @posts.each do |post| %>
+        <h2> <%= post.title %> </h2>
+        <p><%= post.body %></p>
+        <%= link_to 'See Post', post_path(post) %>
+      <% end %>
+    </div>
+    <div class="col-md-3 landing_aside">
+      <h2>Archive</h2>
+      <ol>
+        <li><a class="href">September</a></li>
+        <li><a class="href">October</a></li>
+        <li>November</li>
+        <li>December</li>
+        <li>January</li>
+      </ol>
+      <h2>Categories</h2>
+      <ol>
+        <li><a class="href">Rails</a></li>
+        <li><a class="href">Node.js</a></li>
+        <li>Tech</li>
+        <li>Start-ups</li>
+        <li>Policy</li>
+      </ol>
+    </div>
+  </div>
 
-<%= link_to 'New Post', new_post_path %>
+  <%= link_to 'New Post', new_post_path %>
+</div>
