@@ -95,3 +95,84 @@ header {
     color: white;
   }
 }
+
+/////////////////////
+
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#search {
+  color:black;
+}
+
+.post_info {
+  background: rgba(255, 255, 255, .4);
+  height: 20px;
+  color: rgba(32, 51, 50, .8);
+  border-radius: 5px;
+  width: 40%;
+}
+
+#banner, .banner_show {
+    background-size: cover;
+    h1 {
+      margin-top: 0;
+      color: white;
+      background: rgba(0, 0, 0, .6);
+      height: 100%;
+      text-align: center;
+      font-family: 'Adequate';
+      font-weight: bold;
+    }
+}
+
+#banner {
+  background: image-url('backlit_keyboard_blur.png') no-repeat;
+  background-size: cover;
+  height: 300px;
+  h1 {
+    padding-top: 40px;
+  }
+}
+
+.banner_show {
+  background: image-url('keyboard_blur.png') no-repeat;
+  background-size: cover;
+  height: 100px;
+  h1 {
+    padding-top: 20px;
+  }
+}
+
+#james_hi {
+  display: inline-block;
+  float: left;
+  margin-left: -35px
+}
+
+.nofloat {
+  float:right;
+  display: block;
+}
+
+.welcome {
+  height: 205px;
+}
+
+.landing_aside {
+  border-left: 2px groove white;
+  li {
+    list-style-type: none;
+  }
+  ol {
+    padding-left: 10px
+  }
+}
+
+.field {
+  color:black;
+}
+
+.comment {
+  margin-left: 2em;
+}
